@@ -1,5 +1,3 @@
-# Чат-бот — Учебная практика (2 курс)
-
 # Учебный проект: Чат-бот для вычислений
 
 ## Описание проекта
@@ -42,6 +40,7 @@
 2. Правой кнопкой мыши на файле `index.html`
 3. Выберите "Open with Live Server"
 
+
 ## Структура проекта
 
 ```
@@ -51,7 +50,7 @@ practic_chat_bot/
 ├── css/          # Стили проекта
 │   └── style.css
 ├── js/           # Логика чат-бота
-│   ── main.js
+│   └── main.js
 └── images/
     ├── bot_avatar.png
     ├── user_avatar.png
@@ -76,6 +75,7 @@ practic_chat_bot/
 
 ## GitHub
 [Ссылка на репозиторий GitHub](https://github.com/klimatov/practic_chat_bot)
+[Работающий экземпляр на github-pages](https://klimatov.github.io/practic_chat_bot/)
 
 ---
 
