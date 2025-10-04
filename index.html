@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>Чат-Бот</title>
+</head>
+
+<body>
+  <h1 class="chat-title">Чат-бот</h1>
+  <div class="chat-container">
+    <div class="messages" id="messages"></div>
+    <div class="input-area">
+      <div class="input-wrapper">
+        <input type="text" class="input-area__input" id="userInput" autocomplete="nope" placeholder="...">
+        <button id="sendBtn" class="input-area__button" disabled>
+          <img src="images/paper-plane.svg" alt="Отправить" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
