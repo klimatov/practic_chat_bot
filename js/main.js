@@ -24,9 +24,11 @@ userInput.addEventListener("input", () => {
 
 sendBtn.addEventListener("click", doSend);
 
-document.addEventListener('keydown', e => { if (e.key === 'Enter') { 
-    doSend(); 
-} });
+document.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+        doSend();
+    }
+});
 
 
 function doSend() {
@@ -66,8 +68,11 @@ function addMessage(text, sender = "bot") {
         messageEl.appendChild(bubble);
     }
 
-    messages.appendChild(messageEl);
-    messages.scrollTop = messages.scrollHeight;
+    // Добавляем новое сообщение В НАЧАЛО контейнера
+    messages.insertBefore(messageEl, messages.firstChild);
+
+    // Прокручиваем к самому верху, чтобы показать новое сообщение
+    messages.scrollTop = 0;
 }
 
 function showTyping(callback) {
@@ -93,8 +98,9 @@ function showTyping(callback) {
     typingEl.appendChild(avatar);
     typingEl.appendChild(bubble);
 
-    messages.appendChild(typingEl);
-    messages.scrollTop = messages.scrollHeight;
+    // Добавляем индикатор набора в начало
+    messages.insertBefore(typingEl, messages.firstChild);
+    messages.scrollTop = 0;
 
     setTimeout(() => {
         typingEl.remove();
@@ -127,8 +133,9 @@ function showTypingPlaceholder() {
     typingEl.appendChild(bubble);
     typingEl.appendChild(avatar);
 
-    messages.appendChild(typingEl);
-    messages.scrollTop = messages.scrollHeight;
+    // Добавляем плейсхолдер в начало
+    messages.insertBefore(typingEl, messages.firstChild);
+    messages.scrollTop = 0;
 }
 
 function removeTypingPlaceholder() {
